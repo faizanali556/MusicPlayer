@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a68e41dd6a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Music</title>
+  </head>
+  <body>
+    <script>
+      // This script should be placed at the beginning of the `music.html` page
+      document.addEventListener("DOMContentLoaded", () => {
+        // Retrieve the logged-in user from localStorage
+        let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
+        // Check if a logged-in user exists
+        if (!loggedInUser) {
+          // Alert the user and redirect to the login page
+          alert("You must log in to access the music player.");
+          window.location.href = "login.html"; // Redirect to login page
+        } else {
+          // If the user is logged in, allow access to the page
+          console.log("User is logged in:", loggedInUser);
+          // You can add any additional code here to handle the logged-in state
+        }
+      });
+    </script>
+    <div class="main-div">
+      <div class="music-container">
+        <h2 id="title">Dil Ibadat</h2>
+        <h3 id="artist">Mohit</h3>
+        <div class="img-container">
+          <img
+            class=""
+            src="images/♫ DIL Ibaadat Kar Raha hai Dhadkanain Meri Sun ♫ T(MP3_160K).jpg"
+            alt=""
+          />
+        </div>
+        <audio
+          src="./music//♫ DIL Ibaadat Kar Raha hai Dhadkanain Meri Sun ♫ T(MP3_160K).mp3"
+        ></audio>
+        <!-- Seek bar -->
+        <div class="seek-bar-container">
+          <span id="current-time">0:00</span>
+          <div class="seek-bar" id="seek-bar">
+            <div class="progress" id="progress"></div>
+            <div class="thumb" id="thumb"></div>
+          </div>
+          <span id="total-duration">0:00</span>
+        </div>
+        <!-- controls -->
+        <div class="music-controls">
+          <i class="fas fa-backward" id="prev" title="previous"></i>
+          <i class="fas fa-play main-button" id="play" title="paly"></i>
+          <i class="fas fa-forward" id="next" title="Next"></i>
+        </div>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
