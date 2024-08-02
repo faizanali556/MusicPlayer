@@ -45,18 +45,48 @@
         ></audio>
         <!-- Seek bar -->
         <div class="seek-bar-container">
+          <i id="shuffle" class="fa-solid fa-shuffle"></i>
           <span id="current-time">0:00</span>
           <div class="seek-bar" id="seek-bar">
             <div class="progress" id="progress"></div>
             <div class="thumb" id="thumb"></div>
           </div>
           <span id="total-duration">0:00</span>
+          <i id="repeatBtn" class="fa-solid fa-repeat"></i>
         </div>
         <!-- controls -->
+
         <div class="music-controls">
           <i class="fas fa-backward" id="prev" title="previous"></i>
           <i class="fas fa-play main-button" id="play" title="paly"></i>
           <i class="fas fa-forward" id="next" title="Next"></i>
+        </div>
+        <div class="flex">
+          <a
+            id="downloadBtn"
+            download=""
+            href="./music/♫ DIL Ibaadat Kar Raha hai Dhadkanain Meri Sun ♫ T(MP3_160K).mp3"
+          >
+            <i class="fa-solid fa-circle-down"></i>
+          </a>
+          <div class="inner-flex">
+            <i
+              id="vol-icon"
+              class="fa-sharp-duotone fa-solid fa-volume-high"
+            ></i>
+            <div class="volume-control">
+              <input
+                type="range"
+                id="volume-slider"
+                min="0"
+                max="1"
+                step="0.01"
+                value="1"
+              />
+            </div>
+          </div>
+
+          <!-- <i class="fa-sharp-duotone fa-solid fa-volume-xmark"></i> -->
         </div>
       </div>
     </div>
